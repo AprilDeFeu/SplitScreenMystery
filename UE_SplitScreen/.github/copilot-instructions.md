@@ -11,7 +11,7 @@ A split-screen cyberpunk detective game where a detective interviews suspects wh
 
 ## Technical Foundation
 
-- **Engine:** Unreal Engine 5.6
+- **Engine:** Unreal Engine 5.7
 - **Target Platforms:** PC/Desktop only (Windows, Linux, macOS)
   - **Not targeting mobile devices** - This game requires keyboard input for typing and is optimized for desktop performance
   - Mobile-specific optimizations are disabled
@@ -109,7 +109,7 @@ Use VS Code tasks (see `.vscode/tasks.json`):
 
 Or manually via command line:
 ```powershell
-# Replace <UE5_ROOT> with your Unreal Engine 5.6 installation path
+# Replace <UE5_ROOT> with your Unreal Engine 5.7 installation path
 # Replace <PROJECT_ROOT> with your project directory path
 cd <UE5_ROOT>
 Engine\Build\BatchFiles\Build.bat UE_SplitScreenEditor Win64 Development "<PROJECT_ROOT>\UE_SplitScreen.uproject" -waitmutex
