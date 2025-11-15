@@ -6,16 +6,16 @@
 		},
 		{
 			"name": "UE5",
-			"path": "F:\\EpicGames\\UnrealEngine\\UE_5.7"
+			"path": "F:\\EpicGames\\UnrealEngine\\UE_5.6"
 		}
 	],
 	"settings": {
 		"typescript.tsc.autoDetect": "off",
 		"npm.autoDetect": "off",
 		"terminal.integrated.env.windows": {
-			"PATH": "F:\\EpicGames\\UnrealEngine\\UE_5.7\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.412\\win-x64;${env:PATH}",
-			"DOTNET_ROOT": "F:\\EpicGames\\UnrealEngine\\UE_5.7\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.412\\win-x64",
-			"DOTNET_HOST_PATH": "F:\\EpicGames\\UnrealEngine\\UE_5.7\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.412\\win-x64\\dotnet.exe",
+			"PATH": "F:\\EpicGames\\UnrealEngine\\UE_5.6\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.300\\win-x64;${env:PATH}",
+			"DOTNET_ROOT": "F:\\EpicGames\\UnrealEngine\\UE_5.6\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.300\\win-x64",
+			"DOTNET_HOST_PATH": "F:\\EpicGames\\UnrealEngine\\UE_5.6\\Engine\\Binaries\\ThirdParty\\DotNet\\8.0.300\\win-x64\\dotnet.exe",
 			"DOTNET_MULTILEVEL_LOOKUP": "0",
 			"DOTNET_ROLL_FORWARD": "LatestMajor"
 		}

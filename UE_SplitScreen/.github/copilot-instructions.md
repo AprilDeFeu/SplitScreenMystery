@@ -11,7 +11,10 @@ A split-screen cyberpunk detective game where a detective interviews suspects wh
 
 ## Technical Foundation
 
-- **Engine:** Unreal Engine 5.7
+- **Engine:** Unreal Engine 5.6
+- **Target Platforms:** PC/Desktop only (Windows, Linux, macOS)
+  - **Not targeting mobile devices** - This game requires keyboard input for typing and is optimized for desktop performance
+  - Mobile-specific optimizations are disabled
 - **Language:** C++ (minimal Blueprint usage preferred)
 - **Module:** `UE_SplitScreen` (see `Source/UE_SplitScreen/`)
 - **Build System:** UnrealBuildTool with custom `.Target.cs` and `.Build.cs` files
@@ -76,11 +79,12 @@ Content/
 
 ### 4. Input System
 - Use Enhanced Input System (already in dependencies)
-- Support:
+- **Desktop input only:**
+  - Mouse + Keyboard (primary)
   - PlayStation DualShock/DualSense
   - Xbox controller
   - Generic PC gamepads
-  - Mouse + Keyboard
+- **Keyboard typing required** - Players will need to type during gameplay, confirming this is a desktop-only experience
 - Map all actions to context-aware bindings (e.g., dialogue selection via d-pad or WASD)
 - See `Config/DefaultInput.ini` for axis/action definitions
 
@@ -105,15 +109,17 @@ Use VS Code tasks (see `.vscode/tasks.json`):
 
 Or manually via command line:
 ```powershell
-cd F:\EpicGames\UnrealEngine\UE_5.7
-Engine\Build\BatchFiles\Build.bat UE_SplitScreenEditor Win64 Development "F:\April\Games\SplitScreen\UE_SplitScreen\UE_SplitScreen.uproject" -waitmutex
+# Replace <UE5_ROOT> with your Unreal Engine 5.6 installation path
+# Replace <PROJECT_ROOT> with your project directory path
+cd <UE5_ROOT>
+Engine\Build\BatchFiles\Build.bat UE_SplitScreenEditor Win64 Development "<PROJECT_ROOT>\UE_SplitScreen.uproject" -waitmutex
 ```
 
 ### Running Tests
 ```powershell
 # From Unreal Editor: Tools > Test Automation > Run All Tests
 # Or via command line:
-UnrealEditor-Cmd.exe "F:\April\Games\SplitScreen\UE_SplitScreen\UE_SplitScreen.uproject" -ExecCmds="Automation RunTests Now <TestName>" -unattended -nopause -testexit="Automation Test Queue Empty"
+UnrealEditor-Cmd.exe "<PROJECT_ROOT>\UE_SplitScreen.uproject" -ExecCmds="Automation RunTests Now <TestName>" -unattended -nopause -testexit="Automation Test Queue Empty"
 ```
 
 ### Debugging
