@@ -11,11 +11,11 @@ A split-screen cyberpunk detective game where a detective interviews suspects wh
 
 ## Technical Foundation
 
-- **Engine:** Unreal Engine 5.6 (migrating to 5.7)
+- **Engine:** Unreal Engine 5.7
 - **Language:** C++ (minimal Blueprint usage preferred)
 - **Module:** `UE_SplitScreen` (see `Source/UE_SplitScreen/`)
 - **Build System:** UnrealBuildTool with custom `.Target.cs` and `.Build.cs` files
-- **Primary Map:** `/Game/Maps/LEV_Default.umap`
+- **Primary Map:** `/Game/Levels/MAP_Default.umap`
 
 ## Project Structure
 
@@ -36,7 +36,7 @@ Config/
   └── DefaultInput.ini             # Input mappings (gamepad + KB/M)
 
 Content/
-  ├── Maps/                        # Level files
+  ├── Levels/                      # Level files
   ├── Materials/                   # Custom shaders (PSX + 1-bit dithering)
   ├── Models/                      # Low-poly PSX-style meshes
   └── Audio/                       # Dialogue, ambient sound
@@ -105,7 +105,7 @@ Use VS Code tasks (see `.vscode/tasks.json`):
 
 Or manually via command line:
 ```powershell
-cd F:\EpicGames\UnrealEngine\UE_5.6
+cd F:\EpicGames\UnrealEngine\UE_5.7
 Engine\Build\BatchFiles\Build.bat UE_SplitScreenEditor Win64 Development "F:\April\Games\SplitScreen\UE_SplitScreen\UE_SplitScreen.uproject" -waitmutex
 ```
 
